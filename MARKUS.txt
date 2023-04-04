@@ -1,0 +1,5 @@
+https://computingforgeeks.com/how-to-run-macos-on-kvm-qemu/
+
+Start = ./basic.sh
+Right key to "Boot from Markus"
+
