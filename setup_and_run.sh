@@ -41,8 +41,9 @@ systemctl is-active --quiet libvirtd || (
 )
 
 
-## If the installer and the macOS disk are missing, download the installer
-[ -e BaseSystem.img ] || [ -e macOS.qcow2 ] || ./jumpstart.sh
+## If the BaseSystem is missing, download it
+## Why is it needed?
+[ -e BaseSystem.img ] || ./jumpstart.sh
 
 
 ## Remove the compressed MacOS installer image
