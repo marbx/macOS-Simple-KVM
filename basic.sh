@@ -22,6 +22,6 @@ qemu-system-x86_64 \
     -netdev user,id=net0 \
     -device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
     -device ich9-ahci,id=sata \
-    -drive if=none,file=ESP.qcow2,id=ESP                 -device ide-hd,bus=sata.2,drive=ESP \
-    -drive if=none,file=BaseSystem.img,id=InstallMedia   -device ide-hd,bus=sata.3,drive=InstallMedia \
-    -drive if=none,file=macOS.qcow2,id=SystemDisk        -device ide-hd,bus=sata.4,drive=SystemDisk \
+    -drive if=none,format=qcow2,file=ESP.qcow2,id=ESP                 -device ide-hd,bus=sata.2,drive=ESP \
+    -drive if=none,format=raw,file=BaseSystem.img,id=InstallMedia     -device ide-hd,bus=sata.3,drive=InstallMedia \
+    -drive if=none,format=qcow2,file=macOS.qcow2,id=SystemDisk        -device ide-hd,bus=sata.4,drive=SystemDisk \
